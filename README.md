@@ -1,16 +1,85 @@
-# React + Vite
+# 🌊 Avatar Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web desenvolvida em **React** para exibir personagens do universo de Avatar.
 
-Currently, two official plugins are available:
+O projeto consome uma API própria e apresenta os personagens em um layout inspirado na página de agentes do Valorant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript (ES6+)
+* CSS3
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Funcionalidades
+
+* 📋 Listagem de personagens
+* 🔍 Visualização de detalhes de cada personagem
+* 🖼️ Exibição de imagens dinâmicas
+* 🎨 Layout responsivo (grid adaptável)
+* ⚡ Integração com API (.NET)
+
+---
+
+## ⚙️ Como rodar o projeto
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/avatar-frontend.git
+```
+
+### 2. Acessar a pasta
+
+```bash
+cd avatar-frontend
+```
+
+### 3. Instalar dependências
+
+```bash
+npm install
+```
+
+### 4. Rodar o projeto
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔗 Integração com API
+
+Este projeto consome a API disponível em:
+
+```bash
+http://localhost:5213/api/characters
+```
+
+> ⚠️ Certifique-se de que a API esteja rodando antes de iniciar o frontend.
+
+---
+
+## 🚧 Melhorias futuras
+
+* 🎬 Adicionar vídeos das habilidades dos personagens
+* 🔎 Filtro por elemento (Água, Terra, Fogo, Ar)
+* ❤️ Favoritar personagens
+* 🌐 Deploy do projeto (Vercel/Netlify)
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Matheus de Oliveira 🚀
+
+---
+
+## 📌 Observação
+
+Este projeto faz parte de um portfólio pessoal para fins de estudo em desenvolvimento web.
