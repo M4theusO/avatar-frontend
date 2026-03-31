@@ -1,0 +1,48 @@
+.detail-container {
+  min-height: 100vh;
+  padding: 40px;
+  color: white;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url('/src/assets/background.jpg');
+  background-size: cover;
+}
+
+.detail-image {
+  width: 300px;
+  border-radius: 16px;
+}
+
+.detail-info {
+  max-width: 500px;
+}
+
+.detail-name {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.detail-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.2);
+}
