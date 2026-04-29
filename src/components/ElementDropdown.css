@@ -1,0 +1,67 @@
+.dropdown {
+  position: relative;
+  width: 160px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* botão */
+.dropdown-selected {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all 0.25s ease;
+}
+
+.dropdown-selected:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* seta */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+/* quando abre */
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* itens */
+.dropdown-item {
+  padding: 10px;
+  color: white; /* 👈 aqui resolve */
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

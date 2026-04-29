@@ -7,17 +7,94 @@
   background-position: center;
 }
 
+body {
+  font-family: 'Cinzel', serif;
+}
+
 h1 {
-  color: white;
-  text-align: initial;
+  text-align: center;
   margin-bottom: 30px;
   font-size: 36px;
   padding: 20px;
+
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.2),
+    0 0 20px rgba(255,255,255,0.1);
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.25s ease;
+}
+
+.filters input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* hover */
+.filters input:hover,
+.filters select:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* focus */
+.filters input:focus,
+.filters select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.element-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.element-buttons button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.element-buttons button:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.element-buttons .active {
+  background: #4f46e5;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
   gap: 16px;
 }
 
@@ -43,6 +120,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 10px;
+  position: relative;
 }
 
 .card:hover {
@@ -59,4 +137,71 @@ h1 {
 .card h3 {
   padding: 10px;
   font-size: 18px;
+}
+
+.favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* estrelas */
+.star {
+  position: absolute;
+  font-size: 22px;
+  line-height: 1;
+
+  transition: all 0.3s ease;
+}
+
+/* estrela vazia */
+.empty {
+  opacity: 1;
+  transform: scale(1) translateX(-1px);
+}
+
+/* estrela cheia */
+.filled {
+  opacity: 0;
+  transform: scale(0.5) translateX(-1px);
+}
+
+/* quando ativa */
+.filled.show {
+  opacity: 1;
+  transform: scale(1.2) translateX(-1px);
+}
+
+.empty.hide {
+  opacity: 0;
+  transform: scale(0.5) translateX(-1px);
+}
+
+/* quando passa o mouse (apenas se NÃO estiver favoritado) */
+.favorite:hover .filled:not(.show) {
+  opacity: 1;
+  transform: scale(1.1) translateX(-1px);
+}
+
+.favorite:hover .empty:not(.hide) {
+  opacity: 0;
+  transform: scale(0.5) translateX(-1px);
 }
