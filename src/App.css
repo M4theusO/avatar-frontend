@@ -27,6 +27,34 @@ h1 {
     0 0 20px rgba(255,255,255,0.1);
 }
 
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 10px;
+}
+
+.app-user {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.logout-button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 .filters {
   margin-bottom: 20px;
   display: flex;

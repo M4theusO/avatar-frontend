@@ -3,6 +3,7 @@ import { getCharacters, createCharacter } from "./services/api";
 import './App.css'
 import { useNavigate } from "react-router-dom";
 import ElementDropdown from "./components/ElementDropdown";
+import { useAuth } from "./context/AuthContext";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -11,6 +12,7 @@ function App() {
   const [element, setElement] = useState("");
 
   const navigate = useNavigate();
+  const { username, logout } = useAuth();
 
   async function loadCharacters() {
     const data = await getCharacters();
@@ -46,6 +48,11 @@ function App() {
   return (
     <div className="app">
       {<div style={{ padding: "20px" }}>
+        <div className="app-header">
+          <span className="app-user">Olá, {username}</span>
+          <button className="logout-button" onClick={logout}>Sair</button>
+        </div>
+
         <h1>Personagens de Avatar</h1>
 
         {/* 🔎 BARRA DE BUSCA */}
