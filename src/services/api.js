@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5213/api";
+const BASE_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5213"}/api`;
 const API_URL = `${BASE_URL}/characters`;
 const AUTH_URL = `${BASE_URL}/auth`;
 
